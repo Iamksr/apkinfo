@@ -1,0 +1,52 @@
+<div class="title">
+<h1>Log in</h1>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    <h2><%= f.label :email %></h2><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder: "Enter Your Email" %>
+  </div>
+
+  <div class="field">
+    <h2><%= f.label :password %></h2><br />
+    <%= f.password_field :password, autocomplete: "current-password",placeholder: "Enter Your Password" %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <h2><%= f.label :remember_me %></h2>
+    </div>
+  <% end %>
+  <div class="action">
+  <%= f.submit "Update",class:"login" %> 
+  </div> 
+<% end %>
+
+<h3><%= render "devise/shared/links" %>
+</div>
+<style type="text/css">
+  .login{
+    margin-top: 10px;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: 1s ease;
+    background-color: transparent;
+  }.login:hover{
+    background-color: #fff;
+    color: #000;
+    cursor: 
+   }
+   .form-control{
+    background-color: transparent;
+   }
+   .form-control:hover{
+     background-color: #fff;
+    color: #000;
+     -webkit-transition: width .35s ease-in-out;
+  transition: width .35s ease-in-out;
+   }
+  
+</style>

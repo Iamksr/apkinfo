@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+<div class="title">
+  <h4>Name:<h4>
+ <h2><%= @formula.name %></h2> 
+<br>
+ <h4>Title:</h4><h2>
+  <%= @formula.title %></h2> 
+<br>
+<h4>Description:</h4>
+<h2><%= @formula.description %></h2>
+<br>
+<h4>Kill:</h4>
+<h2><%= @formula.kill %></h2>
+<br>
+<h4>K/D:</h4>
+<h2><%= @formula.kd %></h2>
+<br>
+<h4>Headshot:</h4>
+<h2><%= @formula.hd %></h2>
+
+
+<%= link_to 'Edit', edit_formula_path(@formula) %> |
+<%= link_to 'Back', formulas_path %>
+</div>

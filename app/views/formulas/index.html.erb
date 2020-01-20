@@ -1,0 +1,57 @@
+
+<div class="title">
+<h1>Player Profile</h1>
+<table>
+<div class="card">
+  <thead>
+    <tr>
+      <th><h2>Name</h2></th>
+      <th><h2>Matches</h2></th>
+      <th><h2>Tier</h2></th>
+      <th><h2>Kill</h2></th>
+      <th><h2>K/D</h2></th>
+      <th><h2>Headshot</h2></th>
+      <th colspan="6"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @formulas.each do |formula| %>
+      <tr>
+        <td><h3><%= formula.name %></h3></td>
+        <td><h3><%= formula.title %></h3></td>
+        <td><h3><%= formula.description %></h3></td>
+         <td><h3><%= formula.kill %></h3></td>
+          <td><h3><%= formula.kd %></h3></td>
+           <td><h3><%= formula.hd %></h3></td>
+        <td><%= link_to 'Show', formula,class: "new" %></td>
+        <td><%= link_to 'Edit', edit_formula_path(formula),class: "new" %></td>
+        <td><%= link_to 'Destroy', formula, method: :delete, data: { confirm: 'Are you sure?' },class: "new" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</div>
+</table>
+<br>
+
+<%= link_to 'New Formula', new_formula_path,class: "btn" %>
+</div>
+<style type="text/css">
+  .new{
+    margin-top: 10px;
+    border: 1px solid #fff;
+    padding: 2px 5px;
+    color: #fff;
+    text-decoration: none;
+    transition: 1s ease;
+    background-color: transparent;
+  }
+   .new:hover{
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+   }
+   .card{
+    background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.5));
+   }
+</style>

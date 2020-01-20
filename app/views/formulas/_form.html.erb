@@ -1,0 +1,63 @@
+<%= form_with(model: formula, local: true) do |form| %>
+  <% if formula.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(formula.errors.count, "error") %> prohibited this formula from being saved:</h2>
+
+      <ul>
+        <% formula.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="title">
+  <h1>New Formula</h1>
+  <div class="field">
+    <h2><%= form.label :name %></h2>
+    <%= form.text_field :name,class: "form-control" %>
+  </div>
+
+  <div class="field">
+   <h2> <%= form.label :title %></h2>
+   <%= form.text_field :title,class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <h2><%= form.label :description %></h2>
+    <%= form.text_field :description,class: "form-control" %>
+  </div>
+
+  <div class="action">
+  <%= form.submit "Update",class:"btfhn" %> 
+  </div>       
+
+
+  <%= link_to 'Back', formulas_path %>
+  </div>
+<% end %>
+<style type="text/css">
+  .btfhn{
+    margin-top: 10px;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: 1s ease;
+    background-color: transparent;
+  }
+   .btfhn:hover{
+    background-color: #fff;
+    color: #000;
+    cursor: 
+   }
+   .form-control{
+    background-color: transparent;
+   }
+   .form-control:hover{
+     background-color: #fff;
+    color: #000;
+     -webkit-transition: width .35s ease-in-out;
+  transition: width .35s ease-in-out;
+   }
+  
+</style>

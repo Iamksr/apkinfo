@@ -1,0 +1,74 @@
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "f-horizontal" }) do |f| %>
+        <div class="title">
+               <%= render "devise/shared/error_messages", resource: resource %>
+                <div class="col-lg-8 col-md-8 col-xs-12">
+                  <center><h1>Sign Up Here!</h1></center>
+                    <div class="contact-form">
+                        <form id="contact" action="" method="get">
+                            <div class="col-md-6 col-sm-12">
+                              <fieldset>
+                                <%= f.email_field :email, required: true, autocomplete: "email",class: "f-control",placeholder: "*Your Email Id"%>
+                              </fieldset>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                              <fieldset>
+                                  <%= f.text_field :name, required: true,placeholder: "*Your Name" %>
+                              </fieldset>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                              <fieldset>
+                                 <%= f.password_field :password, required: true,autocomplete: "new-password", placeholder:"Enter New Password"%>
+                              </fieldset>
+                            </div>
+                             <div class="col-md-6 col-sm-12">
+                              <fieldset>
+                                <%= f.password_field :password_confirmation, required: true,autocomplete: "new-password",placeholder:"Confirm Your Password"%>
+                              </fieldset>
+                            </div>
+                          </form>
+                        </div>
+                     </div> 
+                          <div class="action">
+                          <%= f.submit "Update",class:"signup" %> 
+                          </div> 
+                          <%= render "devise/shared/links"%></li>  
+
+                     
+                   </div>
+                   <%end%>
+                   <style type="text/css">
+
+
+.contact-form input,
+.contact-form textarea {
+  color: #7a7a7a;
+  font-size: 15px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  width: 350%;
+  height: 36px;
+  outline: none;
+  padding-top: 5px;
+  padding-left: 40px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin-bottom: 30px;
+}
+ .signup{
+    margin-top: 10px;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: 1s ease;
+    background-color: transparent;
+  }.signup:hover{
+    background-color: #fff;
+    color: #000;
+    cursor: 
+   }
+
+
+</style>
+                
